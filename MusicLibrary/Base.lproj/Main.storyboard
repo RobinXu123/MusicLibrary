@@ -1,25 +1,113 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0bs-Kt-aNT">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Top Music-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicLibrary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PYG-28-YNe">
+                                <rect key="frame" x="0.0" y="492" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="vnJ-Q3-Fa9"/>
+                                </constraints>
+                                <items/>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldn-cs-Lae" customClass="HorizontalScroller" customModule="MusicLibrary" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="HVg-2n-m7v"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="B4v-zD-F1G">
+                                <rect key="frame" x="0.0" y="120" width="600" height="372"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="zuz-a2-P5S" detailTextLabel="xUB-yb-1Eq" style="IBUITableViewCellStyleValue1" id="NX3-MO-EQ1">
+                                        <rect key="frame" x="0.0" y="50" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NX3-MO-EQ1" id="dwK-DS-oGe">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zuz-a2-P5S">
+                                                    <rect key="frame" x="15" y="12" width="32" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xUB-yb-1Eq">
+                                                    <rect key="frame" x="543" y="12" width="42" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PYG-28-YNe" secondAttribute="trailing" id="1dx-eZ-6on"/>
+                            <constraint firstItem="B4v-zD-F1G" firstAttribute="top" secondItem="ldn-cs-Lae" secondAttribute="bottom" id="2Jd-ms-oi8"/>
+                            <constraint firstItem="PYG-28-YNe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2yy-xh-Pec"/>
+                            <constraint firstAttribute="trailing" secondItem="ldn-cs-Lae" secondAttribute="trailing" id="3oF-HJ-HlZ"/>
+                            <constraint firstItem="ldn-cs-Lae" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AQP-s7-ADt"/>
+                            <constraint firstItem="PYG-28-YNe" firstAttribute="top" secondItem="B4v-zD-F1G" secondAttribute="bottom" id="S2V-gb-ZRX"/>
+                            <constraint firstItem="ldn-cs-Lae" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="YD6-2m-teh"/>
+                            <constraint firstItem="B4v-zD-F1G" firstAttribute="top" secondItem="ldn-cs-Lae" secondAttribute="bottom" id="jNb-I5-vTs"/>
+                            <constraint firstAttribute="trailing" secondItem="B4v-zD-F1G" secondAttribute="trailing" id="ohi-cd-2fX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PYG-28-YNe" secondAttribute="bottom" id="soo-PU-8vz"/>
+                            <constraint firstItem="PYG-28-YNe" firstAttribute="top" secondItem="B4v-zD-F1G" secondAttribute="bottom" id="vwh-js-hOW"/>
+                            <constraint firstItem="B4v-zD-F1G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yn4-ZM-DVf"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Top Music" id="3cF-CA-jek"/>
+                    <connections>
+                        <outlet property="dataTable" destination="B4v-zD-F1G" id="dQb-p0-gh6"/>
+                        <outlet property="scroller" destination="ldn-cs-Lae" id="pGa-Dp-jIQ"/>
+                        <outlet property="toolbar" destination="PYG-28-YNe" id="ncm-N1-EOR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1094" y="1089"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="htk-85-OA8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0bs-Kt-aNT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZU7-7B-NCJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GNS-D6-PZi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Pg-Lp-MAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="313" y="1089"/>
         </scene>
     </scenes>
 </document>

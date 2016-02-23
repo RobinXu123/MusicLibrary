@@ -12,6 +12,13 @@
 		2BB604851C7AE2EF0095DE30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BB604831C7AE2EF0095DE30 /* Main.storyboard */; };
 		2BB604871C7AE2EF0095DE30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BB604861C7AE2EF0095DE30 /* Assets.xcassets */; };
 		2BB6048A1C7AE2EF0095DE30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BB604881C7AE2EF0095DE30 /* LaunchScreen.storyboard */; };
+		2BB604921C7AE7840095DE30 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB604911C7AE7840095DE30 /* HTTPClient.swift */; };
+		2BB604951C7AEF730095DE30 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB604941C7AEF730095DE30 /* Album.swift */; };
+		2BB604991C7AF3F10095DE30 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB604981C7AF3F10095DE30 /* AlbumView.swift */; };
+		2BB6049E1C7B01B00095DE30 /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB6049D1C7B01B00095DE30 /* LibraryAPI.swift */; };
+		2BB604A01C7B03B50095DE30 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB6049F1C7B03B50095DE30 /* PersistencyManager.swift */; };
+		2BB604A21C7BF2D40095DE30 /* AlbumExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB604A11C7BF2D40095DE30 /* AlbumExtensions.swift */; };
+		2BB604A61C7BFF9C0095DE30 /* HorizontalScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB604A51C7BFF9C0095DE30 /* HorizontalScroller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		2BB604861C7AE2EF0095DE30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BB604891C7AE2EF0095DE30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BB6048B1C7AE2EF0095DE30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BB604911C7AE7840095DE30 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		2BB604941C7AEF730095DE30 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		2BB604981C7AF3F10095DE30 /* AlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
+		2BB6049D1C7B01B00095DE30 /* LibraryAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
+		2BB6049F1C7B03B50095DE30 /* PersistencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
+		2BB604A11C7BF2D40095DE30 /* AlbumExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumExtensions.swift; sourceTree = "<group>"; };
+		2BB604A51C7BFF9C0095DE30 /* HorizontalScroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalScroller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,53 @@
 		2BB6047E1C7AE2EF0095DE30 /* MusicLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				2BB604931C7AE78C0095DE30 /* API */,
 				2BB6047F1C7AE2EF0095DE30 /* AppDelegate.swift */,
-				2BB604811C7AE2EF0095DE30 /* ViewController.swift */,
+				2BB6049C1C7B01740095DE30 /* Controller */,
+				2BB6049B1C7B01660095DE30 /* Model */,
+				2BB6049A1C7B01580095DE30 /* View */,
 				2BB604831C7AE2EF0095DE30 /* Main.storyboard */,
 				2BB604861C7AE2EF0095DE30 /* Assets.xcassets */,
 				2BB604881C7AE2EF0095DE30 /* LaunchScreen.storyboard */,
 				2BB6048B1C7AE2EF0095DE30 /* Info.plist */,
 			);
 			path = MusicLibrary;
+			sourceTree = "<group>";
+		};
+		2BB604931C7AE78C0095DE30 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2BB604911C7AE7840095DE30 /* HTTPClient.swift */,
+				2BB6049D1C7B01B00095DE30 /* LibraryAPI.swift */,
+				2BB6049F1C7B03B50095DE30 /* PersistencyManager.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		2BB6049A1C7B01580095DE30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BB604981C7AF3F10095DE30 /* AlbumView.swift */,
+				2BB604A51C7BFF9C0095DE30 /* HorizontalScroller.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2BB6049B1C7B01660095DE30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BB604941C7AEF730095DE30 /* Album.swift */,
+				2BB604A11C7BF2D40095DE30 /* AlbumExtensions.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2BB6049C1C7B01740095DE30 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2BB604811C7AE2EF0095DE30 /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +189,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BB604821C7AE2EF0095DE30 /* ViewController.swift in Sources */,
+				2BB604A21C7BF2D40095DE30 /* AlbumExtensions.swift in Sources */,
 				2BB604801C7AE2EF0095DE30 /* AppDelegate.swift in Sources */,
+				2BB6049E1C7B01B00095DE30 /* LibraryAPI.swift in Sources */,
+				2BB604A61C7BFF9C0095DE30 /* HorizontalScroller.swift in Sources */,
+				2BB604921C7AE7840095DE30 /* HTTPClient.swift in Sources */,
+				2BB604991C7AF3F10095DE30 /* AlbumView.swift in Sources */,
+				2BB604951C7AEF730095DE30 /* Album.swift in Sources */,
+				2BB604A01C7B03B50095DE30 /* PersistencyManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MusicLibrary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tk.robinxu.MusicLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -261,6 +322,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MusicLibrary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tk.robinxu.MusicLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -286,6 +348,7 @@
 				2BB604901C7AE2EF0095DE30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
